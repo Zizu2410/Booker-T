@@ -1,0 +1,61 @@
+.banner{
+    margin-top: 1%;
+    height: 30%;
+}
+.banner__image1{
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+.banner__image1 > img {
+        border:6px solid transparent;
+        border-radius:4px;
+        width:100%;
+        height:100%;
+        background-size: cover;
+        box-shadow:rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+        rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+        transition:0.3s;
+}
+li.slick-active button:before{
+    color:black;
+}
+.slick-list{
+    overflow:visible;
+}
+button{
+    z-index:999;
+}
+.banner__text{
+    position: absolute;
+    z-index: 999;
+    margin-top: -20%;
+    margin-left: 8%;
+    color: grey;
+    border: 1px solid white;
+    width: 20%;
+    background-color: white;
+    border-radius: 8px;
+}
+.banner__h2{
+    margin-left: 5%;
+    margin-top: 2%;
+}
+.banner__buttons{
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+.banner__learn{
+    background-color: grey !important;
+    color: white !important;
+    border: 1 px solid green !important;
+    margin-right: 3% !important;
+    margin-left: 5% !important;
+}
+.banner__teach{
+    background-color: grey !important;
+    color: white !important;
+    border: 1 px solid green !important;
+    margin-left: 3% !important;
+}
