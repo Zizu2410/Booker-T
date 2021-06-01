@@ -1,15 +1,36 @@
 .featured{
     margin-top: 3%;
     margin-left: 3%;
+    margin-right: 3%;
     display: flex;
     flex-direction: column;
 }
 .featured__headings{
     margin-top: 2%;
-    display: flex;    
+    display:grid;
+    grid-gap:2%;
+    grid-template-columns:repeat(3,minmax(0,1fr));  
 }
-.featured__headings > .act{
-    margin-left: 2%;
+.featured__headings > button{
+    margin-top: 3%;
+    border: 3px solid #0f7c90 !important;
+    color: #0f7c90 !important;
+    width: 100%;
 }
+
+@media screen and (max-width:790px){
+    .featured__headings{
+        display: grid;
+        grid-template-columns:repeat(2,minmax(0,1fr)); 
+    }
+}
+
+@media screen and (max-width:390px){
+    .featured__headings{
+        display: grid;
+        grid-template-columns:repeat(1,minmax(0,1fr)); 
+    }
+}
+
 
 

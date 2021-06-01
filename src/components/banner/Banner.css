@@ -1,6 +1,8 @@
 .banner{
     margin-top: 1%;
     height: 30%;
+    margin-right: 2rem;
+    margin-left: 2rem;
 }
 .banner__image1{
     cursor: pointer;
@@ -8,7 +10,7 @@
     position: relative;
 }
 .banner__image1 > img {
-        border:6px solid transparent;
+        border:4px solid #0f7c90;
         border-radius:4px;
         width:100%;
         height:100%;
@@ -17,12 +19,7 @@
         rgb(0 0 0 / 73%) 0px 16px 10px -10px;
         transition:0.3s;
 }
-li.slick-active button:before{
-    color:black;
-}
-.slick-list{
-    overflow:visible;
-}
+
 button{
     z-index:999;
 }

@@ -1,0 +1,12 @@
+.categories{
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.categories__slider{
+    border: 1px solid black !important;
+    
+}
+.categories__slider > div {
+    border: 1px solid black !important;
+}
