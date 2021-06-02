@@ -1,0 +1,15 @@
+.courses__programs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3%;
+}
+.courses__programs >h1{
+    font-weight: 500;
+}
+
+.courses__subHeading{
+    margin-top: 3%;
+    font-size: 20px;
+}
