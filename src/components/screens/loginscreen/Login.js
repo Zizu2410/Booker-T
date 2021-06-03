@@ -14,7 +14,7 @@ const Login = () => {
   const paperStyle = {
     padding: "30px 20px",
     width: 400,
-    height: 450,
+    height: 500,
     margin: "20px auto",
   };
 
@@ -33,7 +33,7 @@ const Login = () => {
           <h1>Login</h1>
         </Grid>
 
-        <form>
+        <form className="login__form">
           <TextField
             fullWidth
             variant="outlined"

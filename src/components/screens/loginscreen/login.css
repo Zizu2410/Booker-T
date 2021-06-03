@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 h1 {
   margin: 10px 0px;
 }
@@ -18,20 +19,12 @@ span {
   margin-left: 3px;
 }
 
-form {
+.login__form {
   height: 56vh;
   line-height: 31px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-}
-
-.App {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .login__loginbtn {
@@ -61,9 +54,4 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-root.MuiButton-contained.MuiB
 button.MuiButtonBase-root.MuiButton-root.MuiButton-root.MuiButton-contained.MuiButton-fullWidth:hover {
   background-color: #0f7c90;
   color: #fafafa;
-}
-
-div#root {
-  width: 100%;
-  height: 100vh;
 }

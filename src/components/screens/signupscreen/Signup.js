@@ -1,5 +1,5 @@
 import React from "react";
-import "../signupscreen/Signup";
+import "./signup.css";
 import {
   Avatar,
   Grid,
@@ -9,20 +9,22 @@ import {
   Checkbox,
   FormControlLabel,
 } from "@material-ui/core";
+import { findByLabelText } from "@testing-library/dom";
 
 const SignUp = () => {
   const paperStyle = {
     padding: "30px 20px",
     width: 400,
-    height: 500,
+    height: 550,
     margin: "20px auto",
   };
 
   const avatarStyle = {
-    width: 50,
-    height: 50,
+    width: 60,
+    height: 60,
     color: "#ffff",
     background: "#0F7C90",
+    margin: "10px 0px",
   };
 
   return (
@@ -33,40 +35,59 @@ const SignUp = () => {
           <h3>Sign Up and start Learning!</h3>
         </Grid>
 
-        <form>
-          <TextField
-            fullWidth
-            required
-            variant="outlined"
-            label="Full Name"
-            placeholder="Enter your Name"
-          />
+        <form className="signup__form">
+          <div className="signup__textfields">
+            <TextField
+              fullWidth
+              required
+              variant="outlined"
+              label="Full Name"
+              placeholder="Enter your Name"
+            />
 
-          <TextField
-            fullWidth
-            variant="outlined"
-            typle="email"
-            required
-            label="Email"
-            placeholder="example@gmail.com"
-          />
+            <TextField
+              fullWidth
+              variant="outlined"
+              typle="email"
+              required
+              label="Email"
+              placeholder="example@gmail.com"
+            />
 
-          <TextField
-            fullWidth
-            required
-            variant="outlined"
-            type="password"
-            label="Password"
-            placeholder="Enter Password"
-          />
+            <TextField
+              fullWidth
+              required
+              variant="outlined"
+              type="password"
+              label="Password"
+              placeholder="Enter Password"
+            />
+          </div>
 
           <FormControlLabel
             control={<Checkbox color="primary" name="checkbox" />}
-            label="Yes! I want to get the most out of This website by receiving emails with 
+            label="Yes! I want to get the most out BOOKER-T by receiving emails with 
             exclusive deals,personal recommendations and learning tips!"
           />
 
-          <Button
+          <div className="signip__btn">
+            <Button
+              fullWidth
+              type="submit"
+              variant="contained"
+              background-color="#0F7C90"
+            >
+              Sign Up
+            </Button>
+
+            <p>
+              Already have an account?
+              <span>
+                <a href="#">log In</a>
+              </span>
+            </p>
+          </div>
+          {/* <Button
             fullWidth
             type="submit"
             variant="contained"
@@ -80,7 +101,7 @@ const SignUp = () => {
             <span>
               <a href="#">log In</a>
             </span>
-          </p>
+          </p> */}
         </form>
       </Paper>
     </Grid>
