@@ -55,3 +55,9 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-root.MuiButton-contained.MuiB
   background-color: #0f7c90;
   color: #fafafa;
 }
+
+@media (max-width: 768px) {
+  .login__form {
+    height: 26vh;
+  }
+}
