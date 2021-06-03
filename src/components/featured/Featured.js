@@ -1,17 +1,19 @@
+import { Button } from '@material-ui/core'
 import React from 'react'
 import './Featured.css'
 
 const Featured = () => {
     return (
         <div className='featured'>
-            <h2>The Best Courses On This Planet</h2>
+            <h1>The Best Courses On This Planet</h1>
             <p>Choose from the best 100,000 Courses on our platform</p>
             <div className='featured__headings'>
-                <h3 >Programming</h3>
-                <h3 className='act'>Excel</h3>
-                <h3 className='act'>Data Science</h3>
-                <h3 className='act'>Cloud</h3>
-                <h3 className='act'>Cyber Security</h3>
+                <Button>Programming</Button>
+                <Button>Excel</Button>
+                <Button>Data Science</Button>
+                <Button>Cloud Computing</Button>
+                <Button>Cyber Security</Button>
+                <Button>Graphic Designing</Button>
             </div>
             <div className='empty__space'>
                 .
