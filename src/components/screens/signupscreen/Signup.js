@@ -9,7 +9,6 @@ import {
   Checkbox,
   FormControlLabel,
 } from "@material-ui/core";
-import { findByLabelText } from "@testing-library/dom";
 
 const SignUp = () => {
   const paperStyle = {
@@ -87,21 +86,6 @@ const SignUp = () => {
               </span>
             </p>
           </div>
-          {/* <Button
-            fullWidth
-            type="submit"
-            variant="contained"
-            background-color="#0F7C90"
-          >
-            Sign Up
-          </Button>
-
-          <p>
-            Already have an account?
-            <span>
-              <a href="#">log In</a>
-            </span>
-          </p> */}
         </form>
       </Paper>
     </Grid>

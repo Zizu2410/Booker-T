@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Scrollbars } from "react-custom-scrollbars";
 import CartCourses from "./CartCourses";
 import "./cart.css";
@@ -18,15 +17,6 @@ export const Cart = () => {
           <div className="cart__items__container">
             <Scrollbars>
               <CartCourses />
-              <CartCourses />
-              {/* <CartCourses />
-              <CartCourses />
-              <CartCourses />
-              <CartCourses />
-              <CartCourses />
-              <CartCourses />
-              <CartCourses />
-              <CartCourses /> */}
             </Scrollbars>
           </div>
         </div>

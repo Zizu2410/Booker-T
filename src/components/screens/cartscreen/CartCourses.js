@@ -23,7 +23,6 @@ const CartCourses = () => {
           <p>$12.00</p>
         </div>
       </div>
-
       <hr />
     </>
   );

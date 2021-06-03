@@ -12,13 +12,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Cart />
-
-      {/* <Login /> */}
-      {/* <SignUp /> */}
-
-      {/* <Banner /> */}
-      {/* <Featured /> */}
+      {/* <SignUp/>
+      <Login/>
+      <Cart/> */}
     </div>
   );
 }
