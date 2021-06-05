@@ -19,3 +19,5 @@ db.collection('PureTopCourses').findOne({}, function(err,topCourse){
     }
     console.warn(topCourse)
 })
+
+app.listen(PORT, console.log(`Server is Starting at ${PORT}`))
