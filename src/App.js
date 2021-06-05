@@ -2,6 +2,9 @@ import React from 'react';
 import { Counter } from './features/counter/Counter';
 import './App.css';
 import Home from './screens/homeScreen/Home';
+import { Cart } from "./components/screens/cartscreen/Cart";
+import SignUp from "./components/screens/signupscreen/Signup";
+import Login from "./components/screens/loginscreen/Login";
 import {
   BrowserRouter as Router,
   Switch,

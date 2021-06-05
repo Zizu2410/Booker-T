@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+h4 {
+  margin-bottom: 12px;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0f7c90;
+}
+
+span {
+  margin-left: 3px;
+}
+
+.signup__textfields {
+  margin-top: 18px;
+  height: 29vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.signup__form {
+  height: 60vh;
+  line-height: 31px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Styling on Material UI */
+span.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+
+label.MuiFormControlLabel-root {
+  margin: 5px 0px;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-root.MuiButton-contained.MuiButton-fullWidth {
+  background: #fafafa;
+  color: #0f7c90;
+  border: 2px solid #0f7c90;
+  font-weight: 700;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-root.MuiButton-contained.MuiButton-fullWidth:hover {
+  background-color: #0f7c90;
+  color: #fafafa;
+}
+
+@media (max-width: 768px) {
+  .signup__textfields {
+    margin-top: 20px;
+  }
+
+  .signup__form {
+    height: 34vh;
+    line-height: 66px;
+  }
+}
