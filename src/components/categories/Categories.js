@@ -10,11 +10,11 @@ import axios from '../../axios'
 
 const Categories = (props) => {
 
-    const [courses,setCourses] = useState('')
+    const [courses,setCourses] = useState([])
 
    useEffect(()=>{
        axios.get('/featuredcourses').then(response => {
-           console.log(response.data)
+           setCourses(response.data)
        })
    },[])
     
@@ -54,11 +54,13 @@ const Categories = (props) => {
       ]
     }
 
+    console.log(courses)
 
     return (
         <div className='categories'>
             <h1 className='categories__heading'>TOP COURSES</h1>
             <Slider className='categories__slider' {...setting}>
+               
                 <div className='categories__one'>
                     <img src={MachineLearning} alt='one' />
                     <h3>Machine Learning Mastery</h3>
@@ -147,7 +149,6 @@ const Categories = (props) => {
                         <Button className='categories__buyButton'>Buy Course</Button>
                     </div>
                 </div>
-                
                 
             </Slider>
         </div>
