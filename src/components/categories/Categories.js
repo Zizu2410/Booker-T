@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Categories.css'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -7,9 +7,15 @@ import MachineLearning from '../../assets/d1.jpg'
 import { Button } from '@material-ui/core'
 import axios from '../../axios'
 
-const Categories = () => {
+
+const Categories = (props) => {
 
     const [courses,setCourses] = useState('')
+
+   useEffect(()=>{
+       
+   },[])
+    
 
     let setting = {
       dots: true,
@@ -45,6 +51,7 @@ const Categories = () => {
         }
       ]
     }
+
 
     return (
         <div className='categories'>

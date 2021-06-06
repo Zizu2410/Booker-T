@@ -3,15 +3,16 @@ const  mongoose = require('mongoose')
 const app=express()
 const bodyParser = require('body-parser')
 var ObjectId = require('mongodb').ObjectID;
-PORT = 3001
+PORT = 5000
 require('dotenv').config()
 const cors=require('cors')
 //for parsing the data that we get
-app.use(cors())
+
 app.use(bodyParser.json())
+app.use(cors())
 
 //Import Routes
-const featuredCoursesRoute = require('./routes/featuredCourses')
+const featuredCoursesRoute = require('./routes/featuredCourse')
 
 app.use('/featuredcourses',featuredCoursesRoute)
 

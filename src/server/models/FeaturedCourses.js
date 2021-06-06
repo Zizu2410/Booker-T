@@ -9,4 +9,4 @@ const FeaturedCourseSchema = mongoose.Schema({
     c_slug:String,
 })
 
-module.exports= mongoose.model('PureAllCourses',FeaturedCourseSchema)
+module.exports= mongoose.model('PureTopCourses',FeaturedCourseSchema)
