@@ -9,7 +9,11 @@ const cors=require('cors')
 //for parsing the data that we get
 
 app.use(bodyParser.json())
-app.use(cors())
+app.use((req,res,next)=>{
+    res.setHeader('Access-Control-Allow-Origin','*')
+    res.setHeader('Access-Control-Allow-Headers','*')
+    next()
+})
 
 //Import Routes
 const featuredCoursesRoute = require('./routes/featuredCourse')

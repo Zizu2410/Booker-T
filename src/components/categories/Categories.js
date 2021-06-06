@@ -13,7 +13,9 @@ const Categories = (props) => {
     const [courses,setCourses] = useState('')
 
    useEffect(()=>{
-       
+       axios.get('/featuredcourses').then(response => {
+           console.log(response.data)
+       })
    },[])
     
 
