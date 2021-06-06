@@ -5,19 +5,20 @@ const {db}=require('./topCourses')
 var ObjectId = require('mongodb').ObjectID;
 const topCourses = require('./topCourses')
 PORT = 3001
+require('dotenv').config()
 
-const CONNECTION_URL = "mongodb+srv://Zuzu:PowerBoi69@cluster0.u0m9u.mongodb.net/BookerT-Db?retryWrites=true&w=majority"
+//Import Routes
+const featuredCoursesRoute = require('./routes/featuredCourses')
 
-mongoose.connect(CONNECTION_URL,{
+app.use('/featuredcourses',featuredCoursesRoute)
+
+//connect to mongodb
+
+const url = process.env.CONNECTION_URL
+
+mongoose.connect(url,{
     useNewUrlParser:true,
     useUnifiedTopology:true,
-})
-
-db.collection('PureTopCourses').findOne({}, function(err,topCourse){
-    if(err){
-        console.warn(err)
-    }
-    console.warn(topCourse)
 })
 
 app.listen(PORT, console.log(`Server is Starting at ${PORT}`))
