@@ -2,9 +2,9 @@ import React from 'react';
 import { Counter } from './features/counter/Counter';
 import './App.css';
 import Home from './screens/homeScreen/Home';
-import { Cart } from "./components/screens/cartscreen/Cart";
-import SignUp from "./components/screens/signupscreen/Signup";
-import Login from "./components/screens/loginscreen/Login";
+import { Cart } from "./screens/cartscreen/Cart";
+import SignUp from "./screens/signupscreen/Signup";
+import Login from "./screens/loginscreen/Login";
 import {
   BrowserRouter as Router,
   Switch,
@@ -25,6 +25,15 @@ function App() {
               </Route>
               <Route path='/teach'>
                   <Teach />
+              </Route>
+              <Route path='/cart'>
+                  <Cart />
+              </Route>
+              <Route path='/login'>
+                  <Login />
+              </Route>
+              <Route path='/signup'>
+                  <SignUp />
               </Route>
               <Route path='/'>
                   <Home />

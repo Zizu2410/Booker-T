@@ -9,6 +9,7 @@ import {
   Checkbox,
   FormControlLabel,
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const paperStyle = {
@@ -79,7 +80,9 @@ const Login = () => {
             <p>
               Dont have an account?
               <span>
-                <a href="#">Sign Up</a>
+                <Link to='/signup'>
+                  <p className='sign_url'>Sign Up</p>
+                </Link>
               </span>
             </p>
           </div>

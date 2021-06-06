@@ -9,7 +9,7 @@ p {
   font-size: 14px;
 }
 
-a {
+.login_url {
   text-decoration: none;
   font-weight: bold;
   color: #0f7c90;
