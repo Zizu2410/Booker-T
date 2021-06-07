@@ -36,7 +36,7 @@ function SingleCourse(props) {
             
          
       <ThemeProvider theme={theme}>
-        <Typography variant="h2">{props.c_name}</Typography>
+        <Typography variant="h2">Title</Typography>
         <Typography variant="h4">Description of the project</Typography>
         <Typography variant="h5">$12.99</Typography>
       </ThemeProvider>

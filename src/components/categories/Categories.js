@@ -84,6 +84,7 @@ const Categories = ({sampleCategoryTest,courseName}) => {
                         <Button className='categories__buyButton' onClick={
                             ()=>{
                                 history.push(`/course/${course.c_id}`)
+                                
                             }
                         }>Buy Course</Button>
                     </div>
