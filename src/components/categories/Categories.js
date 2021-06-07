@@ -7,10 +7,11 @@ import { Button } from '@material-ui/core'
 import axios from '../../axios'
 import TextTruncate from 'react-text-truncate'
 import { useHistory } from 'react-router-dom'
+import SingleCourse from '../../screens/singleCourseScreen/SingleCourse'
 
 
 
-const Categories = ({sampleCategoryTest}) => {
+const Categories = ({sampleCategoryTest,courseName}) => {
 
     const [courses,setCourses] = useState([])
 

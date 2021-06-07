@@ -23,7 +23,7 @@ function App() {
               <Route path='/courses'>
                   <Courses />
               </Route>
-              <Route path='/course/:c_id'>
+              <Route path='/course/'>
                   <SingleCourse />
               </Route>
               <Route path='/teach'>
