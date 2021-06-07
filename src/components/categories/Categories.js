@@ -6,9 +6,8 @@ import 'slick-carousel/slick/slick-theme.css'
 import MachineLearning from '../../assets/d1.jpg'
 import { Button } from '@material-ui/core'
 import axios from '../../axios'
-
-
-const Categories = (props) => {
+import Sampledata from './sampleCategoryTest.json'
+const Categories = ({sampleCategoryTest}) => {
 
     const [courses,setCourses] = useState([])
 
@@ -55,101 +54,27 @@ const Categories = (props) => {
     }
 
     console.log(courses)
+    const newCourse = Object.values(courses)
+    console.log(newCourse)
 
     return (
         <div className='categories'>
             <h1 className='categories__heading'>TOP COURSES</h1>
             <Slider className='categories__slider' {...setting}>
                
-                <div className='categories__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='categories__buy'>
-                        <p>$398</p>
-                        <Button className='categories__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='categories__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='categories__buy'>
-                        <p>$398</p>
-                        <Button className='categories__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='categories__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='categories__buy'>
-                        <p>$398</p>
-                        <Button className='categories__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='categories__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='categories__buy'>
-                        <p>$398</p>
-                        <Button className='categories__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='categories__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='categories__buy'>
-                        <p>$398</p>
-                        <Button className='categories__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='categories__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='categories__buy'>
-                        <p>$398</p>
-                        <Button className='categories__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='categories__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='categories__buy'>
-                        <p>$398</p>
-                        <Button className='categories__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='categories__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='categories__buy'>
-                        <p>$398</p>
-                        <Button className='categories__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='categories__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='categories__buy'>
-                        <p>$398</p>
-                        <Button className='categories__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='categories__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='categories__buy'>
-                        <p>$398</p>
-                        <Button className='categories__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='categories__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='categories__buy'>
-                        <p>$398</p>
-                        <Button className='categories__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
                 
+                {newCourse.map((course,key)=>(
+                    <div className='categories__one'>
+                    <img src={course.c_image} alt='one' />
+                    <h3>{course.c_description}</h3>
+                    <div className='categories__buy'>
+                        <p>{course.c_price}</p>
+                        <Button className='categories__buyButton'>Buy Course</Button>
+                    </div>
+                    </div>
+                ))}
+                
+               
             </Slider>
         </div>
     )
