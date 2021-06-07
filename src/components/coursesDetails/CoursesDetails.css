@@ -26,6 +26,8 @@
 }
 .coursesDetails__one > h3{
     margin-top: 5%;
+    margin-left: 1% !important;
+    margin-left: -1% !important;
 }
 .coursesDetails__buy{
     display: flex;

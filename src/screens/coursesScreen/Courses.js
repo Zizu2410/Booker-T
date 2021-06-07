@@ -3,6 +3,7 @@ import './Courses.css'
 import Footer from '../../components/footer/Footer'
 import Header from '../../components/header/Header'
 import CoursesDetails from '../../components/coursesDetails/CoursesDetails'
+import ExcelDetails from '../../components/coursesDetails/ExcelDetails'
 const Courses = () => {
     return (
         <div className='courses'>
@@ -14,6 +15,7 @@ const Courses = () => {
                 </h2>
             </div>
             <CoursesDetails />
+            <ExcelDetails />
             
             <Footer />
         </div>
