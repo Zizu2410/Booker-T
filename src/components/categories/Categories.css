@@ -20,7 +20,10 @@
     transform: translate3d(0,-5px,0);
 }
 .categories__one > h3{
-    margin-top: 5%;
+    margin-top: 5% !important;
+    margin-right: 10% !important;
+    margin-left: 3% !important;
+    margin-left: -1% !important;
 }
 .categories__buy{
     display: flex;

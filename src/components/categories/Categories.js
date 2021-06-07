@@ -6,7 +6,10 @@ import 'slick-carousel/slick/slick-theme.css'
 import MachineLearning from '../../assets/d1.jpg'
 import { Button } from '@material-ui/core'
 import axios from '../../axios'
-import Sampledata from './sampleCategoryTest.json'
+import TextTruncate from 'react-text-truncate'
+
+
+
 const Categories = ({sampleCategoryTest}) => {
 
     const [courses,setCourses] = useState([])
@@ -57,6 +60,8 @@ const Categories = ({sampleCategoryTest}) => {
     const newCourse = Object.values(courses)
     console.log(newCourse)
 
+    
+
     return (
         <div className='categories'>
             <h1 className='categories__heading'>TOP COURSES</h1>
@@ -64,9 +69,12 @@ const Categories = ({sampleCategoryTest}) => {
                
                 
                 {newCourse.map((course,key)=>(
+                    !course[0] &&
                     <div className='categories__one'>
                     <img src={course.c_image} alt='one' />
-                    <h3>{course.c_description}</h3>
+                    <TextTruncate line={1} element="h3"
+                    truncateText="..."
+                    text={course.c_description} />
                     <div className='categories__buy'>
                         <p>{course.c_price}</p>
                         <Button className='categories__buyButton'>Buy Course</Button>
