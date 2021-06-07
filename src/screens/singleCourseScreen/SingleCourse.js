@@ -12,6 +12,7 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import CardMembershipIcon from '@material-ui/icons/CardMembership';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
+import { useHistory } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
@@ -20,10 +21,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 
-function SingleCourse() {
+function SingleCourse(props) {
+    const history = useHistory()
     const classes = useStyles();
   return (
     <div>
@@ -33,7 +36,7 @@ function SingleCourse() {
             
          
       <ThemeProvider theme={theme}>
-        <Typography variant="h2">Title of the project</Typography>
+        <Typography variant="h2">{props.c_name}</Typography>
         <Typography variant="h4">Description of the project</Typography>
         <Typography variant="h5">$12.99</Typography>
       </ThemeProvider>
@@ -49,13 +52,14 @@ function SingleCourse() {
         
         <Typography variant="h2">$12.99</Typography>
         <div className={classes.root}> 
-         <Button className="btn" variant="contained" color="secondary">
+         <Button className="btn" variant="contained" color="secondary"
+         onClick={()=>{
+                history.push('/cart')
+         }}>
         Add to Cart
       </Button> 
       <br/>
-      <Button className="btn" variant="outlined" color="secondary">
-    Buy Now
-      </Button>  
+       
      
 
     </div>

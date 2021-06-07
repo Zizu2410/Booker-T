@@ -3,16 +3,18 @@ import './Categories.css'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import MachineLearning from '../../assets/d1.jpg'
 import { Button } from '@material-ui/core'
 import axios from '../../axios'
 import TextTruncate from 'react-text-truncate'
+import { useHistory } from 'react-router-dom'
 
 
 
 const Categories = ({sampleCategoryTest}) => {
 
     const [courses,setCourses] = useState([])
+
+    const history = useHistory()
 
    useEffect(()=>{
        axios.get('/featuredcourses').then(response => {
@@ -26,6 +28,7 @@ const Categories = ({sampleCategoryTest}) => {
       infinite: true,
       speed: 2000,
       slidesToShow: 4,
+      autoplay:2000,
       slidesToScroll: 4,
       initialSlide: 0,
       responsive: [
@@ -77,7 +80,11 @@ const Categories = ({sampleCategoryTest}) => {
                     text={course.c_name} />
                     <div className='categories__buy'>
                         <p>{course.c_price}</p>
-                        <Button className='categories__buyButton'>Buy Course</Button>
+                        <Button className='categories__buyButton' onClick={
+                            ()=>{
+                                history.push(`/course/${course.c_id}`)
+                            }
+                        }>Buy Course</Button>
                     </div>
                     </div>
                 ))}
