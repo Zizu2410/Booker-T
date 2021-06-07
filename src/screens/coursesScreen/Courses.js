@@ -4,6 +4,8 @@ import Footer from '../../components/footer/Footer'
 import Header from '../../components/header/Header'
 import CoursesDetails from '../../components/coursesDetails/CoursesDetails'
 import ExcelDetails from '../../components/coursesDetails/ExcelDetails'
+import CloudDetails from '../../components/coursesDetails/CloudDetails'
+import CyberSecurityDetails from '../../components/coursesDetails/CyberSecurityDetails'
 const Courses = () => {
     return (
         <div className='courses'>
@@ -16,6 +18,8 @@ const Courses = () => {
             </div>
             <CoursesDetails />
             <ExcelDetails />
+            <CloudDetails />
+            <CyberSecurityDetails />
             
             <Footer />
         </div>

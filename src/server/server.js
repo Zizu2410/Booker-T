@@ -19,10 +19,14 @@ app.use((req,res,next)=>{
 const featuredCoursesRoute = require('./routes/featuredCourse')
 const programmingCoursesRoute = require('./routes/programmingCourse')
 const excelCoursesRoute = require('./routes/excelCourse')
+const cloudCoursesRoute = require('./routes/cloudCourse')
+const cyberSecurityCoursesRoute = require('./routes/cyberSecurityCourse')
 
 app.use('/featuredcourses',featuredCoursesRoute)
 app.use('/programmingcourses',programmingCoursesRoute)
 app.use('/excelcourses',excelCoursesRoute)
+app.use('/cloudcourses',cloudCoursesRoute)
+app.use('/cybersecuritycourses',cyberSecurityCoursesRoute)
 
 //connect to mongodb
 
