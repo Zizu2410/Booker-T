@@ -74,7 +74,7 @@ const Categories = ({sampleCategoryTest}) => {
                     <img src={course.c_image} alt='one' />
                     <TextTruncate line={1} element="h3"
                     truncateText="..."
-                    text={course.c_description} />
+                    text={course.c_name} />
                     <div className='categories__buy'>
                         <p>{course.c_price}</p>
                         <Button className='categories__buyButton'>Buy Course</Button>

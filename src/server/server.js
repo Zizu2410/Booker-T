@@ -18,9 +18,11 @@ app.use((req,res,next)=>{
 //Import Routes
 const featuredCoursesRoute = require('./routes/featuredCourse')
 const programmingCoursesRoute = require('./routes/programmingCourse')
+const excelCoursesRoute = require('./routes/excelCourse')
 
 app.use('/featuredcourses',featuredCoursesRoute)
 app.use('/programmingcourses',programmingCoursesRoute)
+app.use('/excelcourses',excelCoursesRoute)
 
 //connect to mongodb
 

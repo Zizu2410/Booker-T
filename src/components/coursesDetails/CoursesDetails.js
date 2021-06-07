@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import './CoursesDetails.css'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import MachineLearning from '../../assets/d1.jpg'
 import { Button } from '@material-ui/core'
-
+import axios from '../../axios'
+import TextTruncate from 'react-text-truncate'
 
 const CoursesDetails = () => {
+
+    const [programmingCourses, setProgrammingCourses] = useState([])
+
+    useEffect(()=>{
+        axios.get('/programmingcourses').then((response)=>{
+            setProgrammingCourses(response.data)
+        })
+    },[])
 
     let setting = {
       dots: true,
@@ -49,98 +58,27 @@ const CoursesDetails = () => {
       ]
     }
 
+    const arrayOfProgrammingCourses = Object.values(programmingCourses)
+    console.log(arrayOfProgrammingCourses)
+
     return (
         <div className='coursesDetails'>
             <h2 className='coursesDetails__heading'>PROGRAMMING COURSES</h2>
             <Slider className='coursesDetails__slider' {...setting}>
-                <div className='coursesDetails__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='coursesDetails__buy'>
-                        <p>$398</p>
-                        <Button className='coursesDetails__buyButton'>Buy Course</Button>
-                    </div>
+                
+                {arrayOfProgrammingCourses.map((programmingCourse) => (
+                    !programmingCourse[0] &&
+                    <div className='coursesDetails__one'>
+                        <img src={programmingCourse.c_image} alt='one' />
+                        <TextTruncate line={1} element="h3"
+                        truncateText="..."
+                        text={programmingCourse.c_name} />
+                        <div className='coursesDetails__buy'>
+                            <p>{programmingCourse.c_price}</p>
+                            <Button className='coursesDetails__buyButton'>Buy Course</Button>
+                        </div>
                 </div>
-                <div className='coursesDetails__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='coursesDetails__buy'>
-                        <p>$398</p>
-                        <Button className='coursesDetails__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='coursesDetails__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='coursesDetails__buy'>
-                        <p>$398</p>
-                        <Button className='coursesDetails__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='coursesDetails__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='coursesDetails__buy'>
-                        <p>$398</p>
-                        <Button className='coursesDetails__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='coursesDetails__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='coursesDetails__buy'>
-                        <p>$398</p>
-                        <Button className='coursesDetails__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='coursesDetails__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='coursesDetails__buy'>
-                        <p>$398</p>
-                        <Button className='coursesDetails__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='coursesDetails__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='coursesDetails__buy'>
-                        <p>$398</p>
-                        <Button className='coursesDetails__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='coursesDetails__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='coursesDetails__buy'>
-                        <p>$398</p>
-                        <Button className='coursesDetails__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='coursesDetails__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='coursesDetails__buy'>
-                        <p>$398</p>
-                        <Button className='coursesDetails__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='coursesDetails__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='coursesDetails__buy'>
-                        <p>$398</p>
-                        <Button className='coursesDetails__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
-                <div className='coursesDetails__one'>
-                    <img src={MachineLearning} alt='one' />
-                    <h3>Machine Learning Mastery</h3>
-                    <div className='coursesDetails__buy'>
-                        <p>$398</p>
-                        <Button className='coursesDetails__buyButton'>Buy Course</Button>
-                    </div>
-                </div>
+                ))}
             </Slider>
         </div>
     )

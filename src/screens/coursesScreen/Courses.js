@@ -14,11 +14,7 @@ const Courses = () => {
                 </h2>
             </div>
             <CoursesDetails />
-            <CoursesDetails />
-            <CoursesDetails />
-            <CoursesDetails />
-            <CoursesDetails />
-            <CoursesDetails />
+            
             <Footer />
         </div>
     )
