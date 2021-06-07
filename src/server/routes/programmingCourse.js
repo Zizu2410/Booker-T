@@ -7,7 +7,7 @@ const Course = require('../models/programmingCourses')
 
 router.get('/',async (req,res)=>{
     try{
-        const courses= await db.collection('ProrgammingCourses').findOne()
+        const courses= await db.collection('ProgrammingCourses').findOne()
         res.json(courses)
     }catch(err){
         res.json({message:err})
