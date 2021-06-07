@@ -6,6 +6,7 @@ import CoursesDetails from '../../components/coursesDetails/CoursesDetails'
 import ExcelDetails from '../../components/coursesDetails/ExcelDetails'
 import CloudDetails from '../../components/coursesDetails/CloudDetails'
 import CyberSecurityDetails from '../../components/coursesDetails/CyberSecurityDetails'
+import DataScienceDetails from '../../components/coursesDetails/DataScienceDetails'
 const Courses = () => {
     return (
         <div className='courses'>
@@ -20,6 +21,7 @@ const Courses = () => {
             <ExcelDetails />
             <CloudDetails />
             <CyberSecurityDetails />
+            <DataScienceDetails />
             
             <Footer />
         </div>
