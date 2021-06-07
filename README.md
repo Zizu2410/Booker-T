@@ -1,6 +1,6 @@
 # BOOKER-T
 
-*** Developed By : ***
+### Developed By : 
 - Alwaz Qazi
 - Samit Karim
 - Ubaidullah Rao
