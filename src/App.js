@@ -8,11 +8,11 @@ import Login from "./screens/loginscreen/Login";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Courses from './screens/coursesScreen/Courses';
 import Teach from './screens/teachScreen/Teach';
+import SingleCourse from './screens/singleCourseScreen/SingleCourse';
 
 
 function App() {
@@ -22,6 +22,9 @@ function App() {
           <Switch>
               <Route path='/courses'>
                   <Courses />
+              </Route>
+              <Route path='/course/'>
+                  <SingleCourse />
               </Route>
               <Route path='/teach'>
                   <Teach />
