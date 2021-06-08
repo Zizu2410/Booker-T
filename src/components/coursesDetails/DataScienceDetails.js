@@ -7,10 +7,13 @@ import MachineLearning from '../../assets/d1.jpg'
 import { Button } from '@material-ui/core'
 import axios from '../../axios'
 import TextTruncate from 'react-text-truncate'
+import { useHistory } from 'react-router-dom'
 
 const DataScienceDetails = () => {
 
     const [dataScienceCourses, setDataScienceCourses] = useState([])
+
+    const history=useHistory()
 
     useEffect(()=>{
         axios.get('/datasciencecourses').then((response)=>{
@@ -75,7 +78,10 @@ const DataScienceDetails = () => {
                         text={dataScienceCourse.c_name} />
                         <div className='coursesDetails__buy'>
                             <p>{dataScienceCourse.c_price}</p>
-                            <Button className='coursesDetails__buyButton'>Buy Course</Button>
+                            <Button className='coursesDetails__buyButton'
+                            onClick={()=>{
+                                   history.push(`/course/${dataScienceCourse.c_id}`)
+                            }}>Buy Course</Button>
                         </div>
                 </div>
                 ))}

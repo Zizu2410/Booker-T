@@ -7,10 +7,12 @@ import MachineLearning from '../../assets/d1.jpg'
 import { Button } from '@material-ui/core'
 import axios from '../../axios'
 import TextTruncate from 'react-text-truncate'
+import { useHistory } from 'react-router-dom'
 
 const CyberSecurityDetails = () => {
 
     const [cyberSecurityCourses, setCyberSecurityCourses] = useState([])
+    const history = useHistory()
 
     useEffect(()=>{
         axios.get('/cybersecuritycourses').then((response)=>{
@@ -75,7 +77,10 @@ const CyberSecurityDetails = () => {
                         text={cyberSecurityCourse.c_name} />
                         <div className='coursesDetails__buy'>
                             <p>{cyberSecurityCourse.c_price}</p>
-                            <Button className='coursesDetails__buyButton'>Buy Course</Button>
+                            <Button className='coursesDetails__buyButton'
+                            onClick={()=>{
+                                history.push(`/course/${cyberSecurityCourse.c_id}`)
+                            }}>Buy Course</Button>
                         </div>
                 </div>
                 ))}
