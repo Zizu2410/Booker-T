@@ -64,7 +64,6 @@ const Categories = ({sampleCategoryTest,courseName}) => {
     const newCourse = Object.values(courses)
     console.log(newCourse)
 
-    
 
     return (
         <div className='categories'>

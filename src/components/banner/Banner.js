@@ -7,6 +7,7 @@ import Student_1 from '../../assets/student-1.jpg'
 import Student_2 from '../../assets/student-2.jpg'
 import Student_3 from '../../assets/student-3.jpg'
 import { Button } from '@material-ui/core'
+import { useHistory } from 'react-router-dom'
 
 const Banner = () => {
 
@@ -18,6 +19,7 @@ const Banner = () => {
         slidesToScroll:1,
         autoplay:true
     }
+    const history = useHistory()
 
     return (
         <Slider className='banner' {...setting}>
@@ -29,8 +31,12 @@ const Banner = () => {
                     <h2 className='banner__h2'>E-Learning</h2>
                       
                     <div className='banner__buttons'>
-                        <Button className='banner__learn'>Learn</Button>
-                        <Button className='banner__teach'>Teach</Button>
+                        <Button className='banner__learn' onClick={()=>{
+                            history.push('/courses')
+                        }}>Learn</Button>
+                        <Button className='banner__teach' onClick={()=>{
+                            history.push('/teach')
+                        }}>Teach</Button>
                     </div>
                 </div>
                 
